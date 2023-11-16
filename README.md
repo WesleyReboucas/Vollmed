@@ -30,17 +30,34 @@ com a intensão de criar um app IOS de marcação de consulta médica.
 Assuntos abordados:
 
 - [x] Operações CRUD (create, read, update e delete);
-- [ ] Requisição HTTP: GET, POST, PATCH e DELETE;
-- [ ] Integração com uma API Restful e JSON
+- [x] Requisição HTTP: GET, POST, PATCH e DELETE;
+- [x] Integração com uma API Restful e JSON;
+- [ ] Sistema de autenticação utilizando SwiftUI e uma API restful;
+- [ ] Registro e autenticação de usuários;
+- [ ] Implementação do componente Picker para seleção de opções em listas;
+- [ ] UserDefaults e Keychain;
+- [ ] Gerenciamento de informações de autenticação utilizando o AuthenticationManager e o padrão Singleton;
+- [ ] @ObservedObject e @Published para atualizar dinamicamente partes da tela conforme as alterações no estado da autenticação;
 
 ## Layout
 <div style="display: flex; flex-direction: 'row'; align-items: 'center';">
-	<img src="Vollmed/Assets.xcassets/ChefDeliveryBanner.png" width="325px">
+	<img src="Vollmed/Assets.xcassets/Screenshots/Screenshot 1.png" width="325px">
+	<img src="Vollmed/Assets.xcassets/Screenshots/Screenshot 2.png" width="325px">
+	<img src="Vollmed/Assets.xcassets/Screenshots/Screenshot 3.png" width="325px">
+	<img src="Vollmed/Assets.xcassets/Screenshots/Screenshot 4.png" width="325px">
+	<img src="Vollmed/Assets.xcassets/Screenshots/Screenshot 5.png" width="325px">
+	<img src="Vollmed/Assets.xcassets/Screenshots/Screenshot 6.png" width="325px">
+	<img src="Vollmed/Assets.xcassets/Screenshots/Screenshot 7.png" width="325px">
+	<img src="Vollmed/Assets.xcassets/Screenshots/Screenshot 8.png" width="325px">
+	<img src="Vollmed/Assets.xcassets/Screenshots/Screenshot 9.png" width="325px">
+	<img src="Vollmed/Assets.xcassets/Screenshots/Screenshot 10.png" width="325px">
+	<img src="Vollmed/Assets.xcassets/Screenshots/Screenshot 11.png" width="325px">
 </div>
 
 ## Tecnologias
 
 - [Swift UI](https://www.swift.org/)
+- [NodeJS](https://nodejs.org/)
 
 ## Instalação
 
@@ -58,7 +75,7 @@ $ cd Vollmed
 
 ## :scroll: Certificados 
 
-<a href="https://cursos.alura.com.br/certificate/2ca04c07-6dfc-4e4d-a344-b87a32ce6c6c?lang=pt_BR">
+<a href="https://cursos.alura.com.br/certificate/74cd8d35-6dcd-480d-a41a-357c7b4965cb?lang=pt_BR">
 	<img src="https://img.shields.io/static/v1?label=Alura&message=2023&color=199ffc&style=flat"/>
 </a>
 
