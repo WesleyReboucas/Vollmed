@@ -2,7 +2,7 @@
 //  ButtonView.swift
 //  Vollmed
 //
-//  Created by Giovanna Moeller on 12/09/23.
+//  Created by Wesley Rebouças on 15/11/23.
 //
 
 import SwiftUI
@@ -24,7 +24,7 @@ struct ButtonView: View {
     var body: some View {
         Text(text)
             .bold()
-            .foregroundColor(.white)
+            .foregroundStyle(.white)
             .frame(maxWidth: .infinity)
             .padding(.vertical, 14)
             .background(buttonType == .primary ? Color.accentColor : Color(.cancel))

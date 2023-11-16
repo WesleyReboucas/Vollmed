@@ -2,20 +2,34 @@
 //  ContentView.swift
 //  Vollmed
 //
-//  Created by Giovanna Moeller on 12/09/23.
+//  Created by Wesley Rebouças on 15/11/23.
 //
 
 import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        TabView {
+            NavigationStack {
+                HomeView()
+            }
+            .tabItem {
+                Label(
+                    title: { Text("Home") },
+                    icon: { Image(systemName: "house") }
+                )
+            }
+            
+            NavigationStack {
+                MyAppointmentsView()
+            }            
+            .tabItem {
+                Label(
+                    title: { Text("Consultas") },
+                    icon: { Image(systemName: "calendar") }
+                )
+            }
         }
-        .padding()
     }
 }
 

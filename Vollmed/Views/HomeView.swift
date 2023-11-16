@@ -2,12 +2,26 @@
 //  HomeView.swift
 //  Vollmed
 //
-//  Created by Giovanna Moeller on 12/09/23.
+//  Created by Wesley Rebouças on 15/11/23.
 //
 
 import SwiftUI
 
 struct HomeView: View {
+    
+    let service = WebService()
+    @State private var specialists: [Specialist] = []
+    
+    func getSpecialists() async {
+        do {
+            if let specialists = try await service.getAllSpecialists() {
+                self.specialists = specialists
+            }
+        } catch {
+            print("[X] Error getSpecialists: \(error)")
+        }
+    }
+    
     var body: some View {
         ScrollView(showsIndicators: false) {
             VStack {
@@ -19,11 +33,11 @@ struct HomeView: View {
                 Text("Boas-vindas!")
                     .font(.title2)
                     .bold()
-                    .foregroundColor(Color(.lightBlue))
+                    .foregroundStyle(Color(.lightBlue))
                 Text("Veja abaixo os especialistas da Vollmed disponíveis e marque já a sua consulta!")
                     .font(.title3)
                     .bold()
-                    .foregroundColor(.accentColor)
+                    .foregroundStyle(.accent)
                     .multilineTextAlignment(.center)
                     .padding(.vertical, 16)
                 ForEach(specialists) { specialist in
@@ -34,6 +48,11 @@ struct HomeView: View {
             .padding(.horizontal)
         }
         .padding(.top)
+        .onAppear {
+            Task {
+                await getSpecialists()
+            }
+        }
     }
 }
 

@@ -2,7 +2,7 @@
 //  VollmedApp.swift
 //  Vollmed
 //
-//  Created by Giovanna Moeller on 12/09/23.
+//  Created by Wesley Rebouças on 15/11/23.
 //
 
 import SwiftUI
@@ -11,7 +11,7 @@ import SwiftUI
 struct VollmedApp: App {
     var body: some Scene {
         WindowGroup {
-            HomeView()
+            ContentView()
         }
     }
 }
