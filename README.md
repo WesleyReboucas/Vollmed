@@ -32,12 +32,12 @@ Assuntos abordados:
 - [x] Operações CRUD (create, read, update e delete);
 - [x] Requisição HTTP: GET, POST, PATCH e DELETE;
 - [x] Integração com uma API Restful e JSON;
-- [ ] Sistema de autenticação utilizando SwiftUI e uma API restful;
-- [ ] Registro e autenticação de usuários;
-- [ ] Implementação do componente Picker para seleção de opções em listas;
-- [ ] UserDefaults e Keychain;
-- [ ] Gerenciamento de informações de autenticação utilizando o AuthenticationManager e o padrão Singleton;
-- [ ] @ObservedObject e @Published para atualizar dinamicamente partes da tela conforme as alterações no estado da autenticação;
+- [x] Sistema de autenticação utilizando SwiftUI e uma API restful;
+- [x] Registro e autenticação de usuários;
+- [x] Implementação do componente Picker para seleção de opções em listas;
+- [x] UserDefaults e Keychain;
+- [x] Gerenciamento de informações de autenticação utilizando o AuthenticationManager e o padrão Singleton;
+- [x] @ObservedObject e @Published para atualizar dinamicamente partes da tela conforme as alterações no estado da autenticação;
 
 ## Layout
 <div style="display: flex; flex-direction: 'row'; align-items: 'center';">
@@ -76,6 +76,9 @@ $ cd Vollmed
 ## :scroll: Certificados 
 
 <a href="https://cursos.alura.com.br/certificate/74cd8d35-6dcd-480d-a41a-357c7b4965cb?lang=pt_BR">
+	<img src="https://img.shields.io/static/v1?label=Alura&message=2023&color=199ffc&style=flat"/>
+</a>
+<a href="https://cursos.alura.com.br/certificate/1fd5011e-9d14-48e1-803d-570e9078535e?lang=pt_BR">
 	<img src="https://img.shields.io/static/v1?label=Alura&message=2023&color=199ffc&style=flat"/>
 </a>
 
