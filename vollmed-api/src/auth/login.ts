@@ -24,14 +24,14 @@ export const login = async (req: Request, res: Response): Promise<void> => {
       throw new AppError("Senha incorreta!", 401);
     }
 
-    const token = jwt.sign({ id }, "secret_token", {
-      expiresIn: 86400,
+    const token = jwt.sign({ id }, 'secret_token', {
+      expiresIn: 3.1536e+7,
     }); // expira em 24 horas
 
     res.status(200).json({
       auth: true,
+      id,
       token,
-      rota,
     });
   }
 };

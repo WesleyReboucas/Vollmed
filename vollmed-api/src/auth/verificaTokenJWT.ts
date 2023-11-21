@@ -27,12 +27,8 @@ export function verificaTokenJWT(...role: Role[]) {
           .json({ auth: false, message: "Falha ao autenticar o token." });
       }
 
-      if (role.length > 0 && !role.includes(decoded.role)) {
-        return res.status(403).json({ auth: false, message: "Não autorizado" });
-      }
-
-      req.userId = decoded.id;
-      next();
-    });
-  };
+      req.userId = decoded.id
+      next()
+    })
+  }
 }

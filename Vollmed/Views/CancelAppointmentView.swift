@@ -17,12 +17,13 @@ struct CancelAppointmentView: View {
     @State private var reasonToCancel = ""
     
     @Environment(\.presentationMode) var presentationMode
-      
+    
+    // MARK: - Cancel Appointment
     func cancelAppointment() async {
            do {
                isAppointmentCancelled = try await service.cancelAppointment(appointmentID: appointmentID, reasonToCancel: reasonToCancel)
            } catch {
-               print("Ocorreu um erro ao desmarcar a consulta: \(error)")
+               print("[X] Error in cancelAppointment: \(error)")
                isAppointmentCancelled = false
            }
            showAlert = true

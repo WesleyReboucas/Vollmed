@@ -14,6 +14,7 @@ struct ScheduleAppointmentView: View {
     var specialistID: String
     var isRescheduleView: Bool
     var appointmentID: String?
+    var authManager = AuthenticationManager.shared
     
     @State private var selectedDate = Date()
     @State private var showAlert = false
@@ -27,9 +28,10 @@ struct ScheduleAppointmentView: View {
         self.appointmentID = appointmentID
     }
     
+    // MARK: - Reschedule Appointments
     func rescheduleAppointment() async {
         guard let appointmentID else {
-            print("[X] Error get appointment id.")
+            print("[X] Error getAppointment id.")
             return
         }
         do {
@@ -45,7 +47,12 @@ struct ScheduleAppointmentView: View {
         showAlert = true
     }
     
+    // MARK: - Schedule Appointments
     func scheduleAppointment() async {
+        guard let patientID = authManager.patientID else {
+            return
+        }
+        
         do  {
             if let _ = try await service.scheduleAppointment(specialistID: specialistID, patientID: patientID, date: selectedDate.convertToString()) {
                 isAppointmentScheduled =  true
@@ -59,6 +66,7 @@ struct ScheduleAppointmentView: View {
         showAlert = true
     }
     
+    // MARK: - Body
     var body: some View {
         VStack {
             Text("Selecione a data e horário da consulta")

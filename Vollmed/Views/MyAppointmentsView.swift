@@ -13,13 +13,20 @@ struct MyAppointmentsView: View {
     
     @State private var appointments: [Appointment] = []
     
+    var authManager = AuthenticationManager.shared
+    
+    // MARK: - Get All Appointments
     func getAllAppointments() async {
+        guard let patientID = KeychainHelper.get(for: "app-vollmed-patient-id") else {
+            return
+        }
+        
         do {
             if let appointments = try await service.getAllAppointmentsFromPatient(patientID: patientID) {
                 self.appointments = appointments
             }
         } catch {
-            print("[X] Error getAllAppointments: \(error) ")
+            print("[X] Error getAllAppointments: \(error)")
         }
     }
     

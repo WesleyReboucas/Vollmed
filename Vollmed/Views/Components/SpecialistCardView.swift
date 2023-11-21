@@ -16,6 +16,7 @@ struct SpecialistCardView: View {
     
     @State private var specialistImage: UIImage?
     
+    // MARK: - Download Image
     func downloadImage() async {
         do {
             if let image = try await service.downloadImage(from: specialist.imageUrl) {
@@ -26,6 +27,7 @@ struct SpecialistCardView: View {
         }
     }
     
+    // MARK: - Body
     var body: some View {
         VStack(alignment: .leading) {
             HStack(spacing: 16.0) {

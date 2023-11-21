@@ -8,28 +8,42 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @ObservedObject var authManager = AuthenticationManager.shared
+    
+    @State private var isLoading = true
+    
     var body: some View {
-        TabView {
+        
+        if authManager.token == nil {
             NavigationStack {
-                HomeView()
+                SignInView()
             }
-            .tabItem {
-                Label(
-                    title: { Text("Home") },
-                    icon: { Image(systemName: "house") }
-                )
+        } else {
+            TabView {
+                NavigationStack {
+                    HomeView()
+                }
+                .tabItem {
+                    Label(
+                        title: { Text("Home") },
+                        icon: { Image(systemName: "house") }
+                    )
+                }
+                
+                NavigationStack {
+                    MyAppointmentsView()
+                }
+                .tabItem {
+                    Label(
+                        title: { Text("Consultas") },
+                        icon: { Image(systemName: "calendar") }
+                    )
+                }
             }
             
-            NavigationStack {
-                MyAppointmentsView()
-            }            
-            .tabItem {
-                Label(
-                    title: { Text("Consultas") },
-                    icon: { Image(systemName: "calendar") }
-                )
-            }
         }
+        
     }
 }
 

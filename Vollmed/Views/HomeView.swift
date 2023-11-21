@@ -11,7 +11,11 @@ struct HomeView: View {
     
     let service = WebService()
     @State private var specialists: [Specialist] = []
+    @State private var isButtonLogoutClicked: Bool = false
     
+    var authManager = AuthenticationManager.shared
+    
+    // MARK: - Get Specialists
     func getSpecialists() async {
         do {
             if let specialists = try await service.getAllSpecialists() {
@@ -19,6 +23,20 @@ struct HomeView: View {
             }
         } catch {
             print("[X] Error getSpecialists: \(error)")
+        }
+    }
+    
+    // MARK: - Logout
+    func logout() async {
+        do {
+            let logoutSuccessful = try await service.logoutPatient()
+            if logoutSuccessful {
+                authManager.removeToken()
+                authManager.removePatientID()
+            }
+            
+        } catch {
+            print("[X] Error logout: \(error)")
         }
     }
     
@@ -51,6 +69,22 @@ struct HomeView: View {
         .onAppear {
             Task {
                 await getSpecialists()
+            }
+        }
+        .toolbar {
+            ToolbarItem(placement: .topBarTrailing) {
+                Button(action: {
+                    Task {
+                        await logout()
+                        isButtonLogoutClicked =  true
+                    }
+                }, label: {
+                    HStack(spacing: 2) {
+                        Image(systemName: "rectangle.portrait.and.arrow.right")
+                        
+                        Text("Logout")
+                    }
+                })
             }
         }
     }
