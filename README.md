@@ -41,17 +41,19 @@ Assuntos abordados:
 
 ## Layout
 <div style="display: flex; flex-direction: 'row'; align-items: 'center';">
-	<img src="Vollmed/Assets.xcassets/Screenshots/Screenshot 1.png" width="325px">
-	<img src="Vollmed/Assets.xcassets/Screenshots/Screenshot 2.png" width="325px">
-	<img src="Vollmed/Assets.xcassets/Screenshots/Screenshot 3.png" width="325px">
-	<img src="Vollmed/Assets.xcassets/Screenshots/Screenshot 4.png" width="325px">
-	<img src="Vollmed/Assets.xcassets/Screenshots/Screenshot 5.png" width="325px">
-	<img src="Vollmed/Assets.xcassets/Screenshots/Screenshot 6.png" width="325px">
-	<img src="Vollmed/Assets.xcassets/Screenshots/Screenshot 7.png" width="325px">
-	<img src="Vollmed/Assets.xcassets/Screenshots/Screenshot 8.png" width="325px">
-	<img src="Vollmed/Assets.xcassets/Screenshots/Screenshot 9.png" width="325px">
+	<img src="Vollmed/Assets.xcassets/Screenshots/Screenshot 01.png" width="325px">
+	<img src="Vollmed/Assets.xcassets/Screenshots/Screenshot 02.png" width="325px">
+	<img src="Vollmed/Assets.xcassets/Screenshots/Screenshot 03.png" width="325px">
+	<img src="Vollmed/Assets.xcassets/Screenshots/Screenshot 04.png" width="325px">
+	<img src="Vollmed/Assets.xcassets/Screenshots/Screenshot 05.png" width="325px">
+	<img src="Vollmed/Assets.xcassets/Screenshots/Screenshot 06.png" width="325px">
+	<img src="Vollmed/Assets.xcassets/Screenshots/Screenshot 07.png" width="325px">
+	<img src="Vollmed/Assets.xcassets/Screenshots/Screenshot 08.png" width="325px">
+	<img src="Vollmed/Assets.xcassets/Screenshots/Screenshot 09.png" width="325px">
 	<img src="Vollmed/Assets.xcassets/Screenshots/Screenshot 10.png" width="325px">
 	<img src="Vollmed/Assets.xcassets/Screenshots/Screenshot 11.png" width="325px">
+	<img src="Vollmed/Assets.xcassets/Screenshots/Screenshot 12.png" width="325px">
+	<img src="Vollmed/Assets.xcassets/Screenshots/Screenshot 13.png" width="325px">
 </div>
 
 ## Tecnologias
@@ -61,17 +63,14 @@ Assuntos abordados:
 
 ## Instalação
 
+### Clone do Repositorio
 ```bash
-# Clone do Repositorio
-$ git clone https://github.com/WesleyReboucas/Vollmed.git
+git clone https://github.com/WesleyReboucas/Vollmed.git
 ```
-
+### Na pasta Vollmed/vollmed-api, rode a API
 ```bash
-# Na pasta Vollmed
-$ cd Vollmed
-
+cd Vollmed/vollmed-api && npm install && npm start
 ```
-
 
 ## :scroll: Certificados 
 
